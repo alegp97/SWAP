@@ -1,0 +1,98 @@
+
+Introducción a Git (chuletario básico)
+
+
+Git es un sistema de control de versiones distribuido. Trabajamos en un repositorio local (no necesitamos red constantemente), y cuando queramos/podamos lo subimos al repositorio remoto.
+
+Se maneja a base de comandos de terminal. Hay clientes gráficos, pero lo más eficiente es usar la línea de comandos.
+
+
+Tareas básicas
+
+Tras instalarlo, conviene configurar el nombre y correo que vamos a usar:
+ git config --global user.name "Mi Nombre"
+ git config --global user.email "miemail@gmail.com"
+ git config --global color.ui true
+ git config --global core.editor joe
+
+Conviene luego configurar las claves ssh para enviarla al servidor remoto y así, al sincronizar hacia el repositorio remoto, no tendremos que estar escribiendo email y clave.
+
+En cualquier momento podemos pedir ayuda:
+ git help
+ git help COMANDO
+ 
+Para iniciar un repositorio, creamos un directorio, y para ponerlo bajo el control de git, entramos en él y allí ejecutamos:
+ git init
+
+También podemos añadir un repositorio remoto:
+ git remote add origin URLREPOSITORIOREMOTO
+
+Si existe un repositorio que queremos clonar (si trabajamos con github.com es lo habitual), haremos:
+ git clone URLREPOSITORIOREMOTO
+
+Una vez que tenemos el repositorio configurado, podemos añadir (o borrar, mover, etc) archivos al repositorio local:
+ git add NOMBREFICHERO
+ git rm NOMBREFICHERO
+ git mv NOMBREFICHERO1 NUEVONOMBREFICH
+
+Para comprobar el estado del repositorio ejecutamos:
+ git status
+
+Para ver los logs, viendo los cambios ordenados con fechas y con los comentarios, de lo que hemos hecho:
+ git log
+ git log --graph
+
+Si queremos subir los cambios desde el repositorio local al repositorio remoto (a la rama por defecto), ejecutaremos:
+ git commit -a -m "comentario sobre el cambio"
+ git push
+y en ese momento, los demás podrán obtener nuestros cambios.
+
+Si alguien ha subido cambios al repositorio remoto, podemos descargarlos para integrarlos en nuestro repositorio local:
+ git pull
+
+Puede que mientras subimos nuestros cambios, alguien haya cambiado algo. En ese caso, ha habido un conflicto. Git nos informa detalladamente. Nos muestra los cambios que vienen del remoto y los que tenemos nosotros, los compara con un diff, y nos permite editar y ver cuáles nos quedamos. Entonces ya sí podremos hacer el pull.
+
+
+Trabajando con ramas
+
+En proyectos donde haya varios usuarios, lo normal (y recomandable) es trabajar sacando ramas (copia del proyecto en cierto momento para seguir trabajando en alguna parte del mismo).
+
+Para crear rama, ejecutamos
+ git branch NOMBREDELARAMACREADA
+
+Si hay varias ramos, nos movemos a otra rama con:
+ git checkout master    (ir a trabajar sobre la rama principal, master)
+ git checkout NOMBREDELARAMACREADA    (ir a trabajar a la otra rama derivada)
+
+Para consultar en qué rama estamos:
+ git branch
+
+Para borrar una rama:
+ git branch -d NOMBREDELARAMACREADA
+
+Si necesitamos mezclar (juntar) la rama derivada en la que hemos estado trabajando con aquella de la que la hicimos (su "madre"), haremos:
+ git merge NOMBREDELARAMACREADA
+
+Por supuesto, al mezclar pueden surgir conflictos. Nos mostrará las diferencias para que aceptemos cambios.
+
+
+Recuperando versiones antiguas
+
+Si por cualquier motivo necesitamos recuperar versiones más antiguas del repositorio, podemos forzar a volver a un estado anterior ejecutando:
+ git reset ­­hard HASH_DEL_COMMIT_A_RECUPERAR
+
+Es conveniente ver qué cambios se hicieron en cierto "commit". Para ello, hacemos:
+ git show HASH_DE_UN_COMMIT
+
+Y si lo que queremos es recuperar o consultar el estado de un archivo en aquel commit, podemos hacer:
+ git show HASH_DE_UN_COMMIT:ruta/a/un/archivo
+ git show HASH_DE_UN_COMMIT:ruta/a/un/archivo > archivo_copia
+
+
+Enlaces
+
+ http://git-scm.com/book/es/v1
+ http://www.psicobyte.com/descargas/ZenDeGit2.pdf
+ http://www.psicobyte.com/descargas/0agit9.pdf
+ http://www.alvaroremesal.net/blog-alvaroremesal/recuperar-archivos-antigos-con-git
+ 
