@@ -32,7 +32,7 @@ Máquina Clonada	  - derecha
 Acceso mediante **SSH**
 
 
-Las máquinas deben estar operativas y conocer los credenciales de acceso así como la dirección IP de la otra. La conexión se realiza mediante ssh <user>@<ip>.
+Las máquinas deben estar operativas y conocer los credenciales de acceso así como la dirección IP de la otra. La conexión se realiza mediante ssh `<user>@<ip>`.
 
 
 
