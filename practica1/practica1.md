@@ -1,4 +1,4 @@
-#Práctica 1: Preparación de las herramientas
+#Práctica 1: Preparación de las herramientas#
 
 
 *En esta práctica el objetivo es configurar las máquinas virtuales para trabajar en
