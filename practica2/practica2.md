@@ -46,7 +46,7 @@ Para comprobar el funcionamiento de rsync se borra el contenido de un directorio
 
 Se pasar más argumentos a rsync como --exclude para excluir directorios o --delete para eliminar los archivos en la máquina origen->
 
-*rsync -avz --delete --exclude=/stats --exclude=/error --exclude=/files/pictures -e ssh maquina1:/var/www/ /var/www/
+*rsync -avz --delete --exclude=/stats --exclude=/error --exclude=/files/pictures -e ssh maquina1:/var/www/ /var/www/*
 
 
 Nota. En rsync -avz -e
