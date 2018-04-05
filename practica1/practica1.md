@@ -1,14 +1,19 @@
 # Práctica 1: Preparación de las herramientas
 
 
+
+
 *En esta práctica el objetivo es configurar las máquinas virtuales para trabajar en
 prácticas posteriores, asegurando la conectividad entre dichas máquinas.Como resultado de la práctica 1 se mostrarán dos máquinas funcionando al
 profesor en clase (accesos con curl para solicitar páginas web sencillas, así como el
 acceso por SSH entre ambas máquinas).*
 
-*Específicamente, hay que llevar a cabo las siguientes tareas:
+Específicamente, hay que llevar a cabo las siguientes tareas:
 1. acceder por ssh de una máquina a otra
-2. acceder mediante la herramienta curl desde una máquina a la otra*
+2. acceder mediante la herramienta curl desde una máquina a la otra
+
+
+
 
 
 He usado para la realización de las prácticas:**VMWare Workstation 14**
@@ -18,6 +23,7 @@ Lo primero y principal para conectarlas es conocer la IP: `ifconfig`
 
 
 Máquina Principal - izquierda
+
 Máquina Clonada	  - derecha
 
 ![ifconfig](images/ifconfig.png)
