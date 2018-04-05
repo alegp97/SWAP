@@ -37,15 +37,16 @@ Se comprime la carpeta actual (home) en la máquina 1 y es enviada a la máquina
 
 Lo primero y principal es establecer como dueño del directorio web al usuario en cuestión (sin privilegios) de ambas máquinas: `sudo chown alegp97:alegp97 –R /var/www`
 
-Para comprobar el funcionamiento de rsync se borra el contenido de un directorio de la máquina 2 y 
-se clona en la máquina 1:
+Para comprobar el funcionamiento de rsync se borra el contenido de un directorio de la máquina 2 y se clona en la máquina 1:
 
 `rsync -avz -e ssh user@ip:/dir/original/ /dir/destino/`
 
 
 ![ifconfig](images/rsync.png)
 
-Se pasar más argumentos a rsync como --exclude para excluir directorios o --delete para eliminar los archivos en la máquina origen. rsync -avz --delete --exclude=**/stats --exclude=**/error --exclude=**/files/pictures -e ssh maquina1:/var/www/ /var/www/
+Se pasar más argumentos a rsync como --exclude para excluir directorios o --delete para eliminar los archivos en la máquina origen->
+
+*rsync -avz --delete --exclude=/stats --exclude=/error --exclude=/files/pictures -e ssh maquina1:/var/www/ /var/www/
 
 
 Nota. En rsync -avz -e
