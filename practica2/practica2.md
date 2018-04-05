@@ -1,10 +1,10 @@
-#Práctica 2: Clonar la información de un sitio web
+# Práctica 2: Clonar la información de un sitio web
 
 
 *En esta práctica el objetivo es configurar las máquinas virtuales para trabajar en modo
 espejo, consiguiendo que una máquina secundaria mantenga siempre actualizada la
-información que hay en la máquina servidora principal.
-Hay que llevar a cabo las siguientes tareas:
+información que hay en la máquina servidora principal.* 
+*Hay que llevar a cabo las siguientes tareas:
 1. probar el funcionamiento de la copia de archivos por ssh
 2. clonado de una carpeta entre las dos máquinas
 3. configuración de ssh para acceder sin que solicite contraseña
@@ -14,7 +14,7 @@ actualizado el contenido del directorio /var/www entre las dos máquinas*
 
 
 
-##Copia de archivos por SSH
+## Copia de archivos por SSH
 
 
 Esto suele ser útil para la copia de algún archivo puntual o para crear directamente un archivo en nuestro servidor a través de ssh. 
@@ -31,7 +31,7 @@ Se comprime la carpeta actual (home) en la máquina 1 y es enviada a la máquina
 
 
 
-##Instalación rsync
+## Instalación rsync
 
 
 Lo primero y principal es establecer como dueño del directorio web al usuario en cuestión (sin privilegios) de ambas máquinas: **sudo chown alegp97:alegp97 –R /var/www **
