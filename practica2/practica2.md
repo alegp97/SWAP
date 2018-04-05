@@ -5,12 +5,12 @@
 espejo, consiguiendo que una máquina secundaria mantenga siempre actualizada la
 información que hay en la máquina servidora principal.* 
 
-*Hay que llevar a cabo las siguientes tareas:
+Hay que llevar a cabo las siguientes tareas:
 1. probar el funcionamiento de la copia de archivos por ssh
 2. clonado de una carpeta entre las dos máquinas
 3. configuración de ssh para acceder sin que solicite contraseña
 4. establecer una tarea en cron que se ejecute cada hora para mantener
-actualizado el contenido del directorio /var/www entre las dos máquinas*
+actualizado el contenido del directorio /var/www entre las dos máquinas
 
 
 
