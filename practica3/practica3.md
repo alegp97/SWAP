@@ -37,7 +37,7 @@ Las IPs son:
 **Combiene** aclarar que cada vez que se cambie el archivo de configuración se debe reiniciar el servicio (nginx o haproxy) `sudo systemctl restart <servicio>`
 
 
-#Nginx
+##Nginx
 
 
 Lo primero será es instalar nginx y activarlo:
@@ -101,7 +101,7 @@ upstream backend  {
 }
 ```
 
-#Haproxy
+##Haproxy
 
 
 **Instalamos y activamos** haproxy:
