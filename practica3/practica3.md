@@ -90,7 +90,7 @@ upstream backend  {
 
 
 La directiva `ip_hash` permite que cuando recibimos varias peticiones de la misma IP se redirigan al mismo servidor. 
-Sin embargo el balanceo no será equilibrado cuando todos los usuarios vienen con una NAT o un proxy,  por lo que una solución es mantener abiertas la conexiónes durante algunos segundos..
+Sin embargo el balanceo no será equilibrado cuando todos los usuarios vienen con una NAT o un proxy,  por lo que una solución es mantener abiertas la conexiónes durante algunos segundos.
 
 
 ```
@@ -99,6 +99,7 @@ upstream backend  {
     server 172.16.157.129 weight=1;  #máquina 2
     keepalive 3;
 }
+```
 
 #Haproxy
 
@@ -175,8 +176,6 @@ Al igual que con nginx con la directiva weight poodemos asignar diferentes capac
 
 
 
-
-
 ## Apache Benchmark. Someter a una alta carga el servidor balanceado
 
 ```ab -c 100 -n 1000 http:/localhost```
@@ -226,7 +225,7 @@ Para medir el rendimiento de los servidores la herramienta **Apache Benchmark** 
 
 Los valores de peticiones/segundo y velocidad de transferencia son los mejores. **Y en la última tabla (con mayor carga) las diferencias son mayores
 
-- nºpeticiones (-n): 10.000
+-nºpeticiones (-n): 10.000
 -pet. concurrentes (-c): 30 
 
 |  |     time(s)| req/second | time/request(ms) | transfer rate(KB/s) | connect(ms) | processing(ms) | waiting(ms) | total(ms) |
