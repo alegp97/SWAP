@@ -29,9 +29,13 @@ explicados en este guión (por ejemplo Pound).*
 Las IPs son:
 
 -172.16.157.128 como  servidor 1 (principal)
+
 -172.16.157.129 como  servidor 2 (respaldo)
+
 -172.16.157.131 como  balanceador **nginx**
+
 -172.16.157.136 como balanceador **haproxy**
+
 -172.16.157.137 como **cliente externo**
 
 **Combiene** aclarar que cada vez que se cambie el archivo de configuración se debe reiniciar el servicio (nginx o haproxy) `sudo systemctl restart <servicio>` 
