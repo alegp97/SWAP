@@ -1,4 +1,4 @@
-#Práctica 3: Balanceo de carga
+# Práctica 3: Balanceo de carga
 
 
 *En esta práctica se llevarán a cabo, como mínimo, las siguientes tareas:*
@@ -34,10 +34,10 @@ Las IPs son:
 -172.16.157.136 como balanceador **haproxy**
 -172.16.157.137 como **cliente externo**
 
-**Combiene** aclarar que cada vez que se cambie el archivo de configuración se debe reiniciar el servicio (nginx o haproxy) `sudo systemctl restart <servicio>`
+**Combiene** aclarar que cada vez que se cambie el archivo de configuración se debe reiniciar el servicio (nginx o haproxy) `sudo systemctl restart <servicio>` 
 
 
-#Nginx
+## Nginx
 
 
 Lo primero será es instalar nginx y activarlo:
@@ -101,7 +101,7 @@ upstream backend  {
 }
 ```
 
-#Haproxy
+## Haproxy
 
 
 **Instalamos y activamos** haproxy:
