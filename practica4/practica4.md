@@ -190,7 +190,7 @@ iptables -A OUTPUT -p tcp --sport 443 -j ACCEPT
 
 Para volver a la configuración de la máquina inicial y permitir todo el tráfico
 
-
+```
 **Eliminar todas las reglas (configuración limpia)**
 iptables -F
 iptables -X
@@ -203,7 +203,7 @@ iptables −P INPUT ACCEPT
 iptables −P OUTPUT ACCEPT
 iptables −P FORWARD ACCEPT
 iptables -L -n -v
-
+```
 
 La salida es la siguiente:
 
