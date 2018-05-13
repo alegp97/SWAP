@@ -155,7 +155,7 @@ Bloquear todo el tráfico de salida hacia una IP:
 
 `iptables -I OUTPUT -s IPbloqueada -j DROP`
 
-# Crear un script con las reglas para que se ejecute al arrancar el sistema
+## Crear un script con las reglas para que se ejecute al arrancar el sistema
 
 ```
 (1) Eliminar todas las reglas (configuración limpia)
@@ -196,6 +196,8 @@ iptables -F
 iptables -X
 iptables -Z
 iptables -t nat -F
+
+
 **política por defecto: aceptar todo**
 iptables −P INPUT ACCEPT
 iptables −P OUTPUT ACCEPT
