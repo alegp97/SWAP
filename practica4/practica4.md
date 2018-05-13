@@ -229,7 +229,7 @@ Como se observa, iptables queda correctamente configurado. Por lo tanto, debemos
 
 `sh /path/to/script.sh`
 
-![ifconfig](images/8.png)
+![ifconfig](images/orden.png)
 
 
 
