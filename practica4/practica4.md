@@ -61,6 +61,7 @@ Para comprobar la correcta instalación, haremos una **petición curl HTTPS**
 
 
 *-192.168.56.11 tiene HTTPS activo*
+
 *-192.168.56.10 no tiene HTTPS activo*
 
 ![ifconfig](images/3.png)
@@ -108,7 +109,7 @@ Finalmente reiniciamos el servicio y comprobamos que funciona correctamente.
 
 
 
-## Configurar cortafuegos con IPTABLES
+### Configurar cortafuegos con IPTABLES
 
 
 Un cortafuegos es un componente esencial que protege la granja web de accesos indebidos. Son dispositivos colocados entre subredes para realizar diferentes tareas de manejo de paquetes. Actúa como el guardián de la puerta al sistema web,permitiendo el tráfico autorizado y denegando el resto.
